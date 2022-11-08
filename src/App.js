@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import  Nav from './components/navBar';
+import ItemList from './components/itemList-container';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <><header className="App-header">
+      <div id="portada-inicio">
+
+        <h1>Flash video game store</h1>
+
+      </div>
+
+      <Nav />
+    </header>
+    
+    <section className="App-content">
+
+    <ItemList greeting={"Hola aqui es donde iran los futuros productos"}/>
+
+    </section></>
+
+
+);
 }
 
 export default App;
