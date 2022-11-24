@@ -1,23 +1,40 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Image from '../carrito2.jpg';
+import { useEffect, useState } from "react";
+import ItemList from "./ItemList";
+import { item } from "../mocks/item-mock";
+import { useParams } from "react-router-dom";
 
-function ItemList({greeting}){
+const ItemListContainer = () => {
+    const { category } = useParams();
+    const [games, setGames] = useState([]);
+  
+    useEffect(() => {
+      new Promise((resolve) =>
+        setTimeout(() => {
+          resolve(item);
+        }, 1000)
+      ).then((data) => {
 
-return(
+        if (category) {
+          const categories = data.filter(
+            (product) => product.category === category
+          );
+          setGames(categories);
+        } else {
+          setGames(data);
+        }
+      });
 
-<Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={Image} />
-      <Card.Body>
-        <Card.Title>{greeting}</Card.Title>
-        <Card.Text>
-        {greeting}
-        </Card.Text>
-        <Button variant="primary">{greeting}</Button>
-      </Card.Body>
-    </Card>
+    
+    }, [category]);
+  
 
-);
-}
+  
+    return (
+    
+        <ItemList products={games} />
 
-export default ItemList
+        
+    );
+  };
+  
+  export default ItemListContainer;

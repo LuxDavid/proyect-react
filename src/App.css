@@ -21,6 +21,7 @@ background-color:rgb(36, 35, 35) ;
 
 .nav-item{
 padding-left: 5rem;
+text-decoration: none;
 }
 
 .nav-link{
@@ -42,4 +43,29 @@ height: 40px;
 .carrito:hover{
 cursor: pointer;
 transform: scale(1.2, 1.2);
+}
+
+.imagesCards{
+width: 14rem;
+height: 14rem;
+padding-top: 15px;
+padding-left: 60px;
+}
+
+.contenedor-cards{
+flex-flow: row wrap;
+}
+
+.card{
+margin: 1rem;
+text-align: center;
+}
+
+.rutas{
+color: white;
+text-decoration: none;
+}
+
+.rutas:hover{
+color: yellow;
 }

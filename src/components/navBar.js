@@ -1,4 +1,6 @@
 import CarWidget from "./cartWidget";
+import {Link} from "react-router-dom";
+
 function Nav(){
 
 return(
@@ -6,17 +8,17 @@ return(
   <div class="container-fluid">
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Inicio</a>
+      <li class="nav-item">
+          <Link class="nav-link" aria-current="page" to="/">Home</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Juegos</a>
+          <Link class="nav-link" aria-current="page" to="/category/PSN">PSN</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Nosotros</a>
+          <Link class="nav-link" aria-current="page" to="/category/XBOX">XBOX</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><CarWidget/></a>
+          <Link class="nav-link" ><CarWidget/></Link>
         </li>
       </ul>
       <form class="d-flex" role="search">

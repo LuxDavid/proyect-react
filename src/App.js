@@ -1,26 +1,18 @@
 import './App.css';
-import  Nav from './components/navBar';
-import ItemList from './components/itemList-container';
+import Layout from './components/Layout';
+import ItemListContainer from './components/itemList-container';
+
 
 function App() {
   return (
 
-    <><header className="App-header">
-      <div id="portada-inicio">
+    <Layout>
 
-        <h1>Flash video game store</h1>
+<ItemListContainer/>
 
-      </div>
-
-      <Nav />
-    </header>
+  </Layout>
     
-    <section className="App-content">
-
-    <ItemList greeting={"Hola aqui es donde iran los futuros productos"}/>
-
-    </section></>
-
+   
 
 );
 }
