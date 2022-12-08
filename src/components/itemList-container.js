@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import { item } from "../mocks/item-mock";
+import { Items } from "../mocks/Items-mock";
 import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
@@ -10,7 +10,7 @@ const ItemListContainer = () => {
     useEffect(() => {
       new Promise((resolve) =>
         setTimeout(() => {
-          resolve(item);
+          resolve(Items);
         }, 1000)
       ).then((data) => {
 

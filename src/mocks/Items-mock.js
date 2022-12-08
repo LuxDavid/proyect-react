@@ -5,10 +5,10 @@ import Juego4 from "../assets/images/juegoxbox-1.jpg";
 import Juego5 from "../assets/images/juegoxbox-2.jpg";
 import Juego6 from "../assets/images/juegoxbox-3.jpg";
 
-export const item = [
+export const Items = [
 
     {
-        id: 1,
+        id:"1",
         name: "God of war Ragnarok",
         category: 'PSN',
         description: 'God of war Ragnarok edicion: PS4 original',
@@ -16,7 +16,7 @@ export const item = [
         price: 1200,
         img: Juego1,
     },    {
-        id: 2,
+        id:"2",
         name: "Resident Evil 3",
         category:'PSN',
         description: 'Resident Evil 3 Remake edicion: PS4 original',
@@ -25,7 +25,7 @@ export const item = [
         img: Juego2,
     },
     {
-        id: 3,
+        id:"3",
         name: "Tha last of us",
         category:'PSN',
         description: 'The last of uf Remake edicion: PS4 original',
@@ -34,7 +34,7 @@ export const item = [
         img: Juego3,
     },
     {
-        id: 4,
+        id:"4",
         name: "Gear of War 4",
         category:'XBOX',
         description: 'Gear of War 4 edicion: Xbox One',
@@ -43,7 +43,7 @@ export const item = [
         img: Juego4,
     },
     {
-        id: 5,
+        id: "5",
         name: "Halo Infinite",
         category:'XBOX',
         description: 'Halo Infinite edicion: Xbox one/Xbox series X',
@@ -52,7 +52,7 @@ export const item = [
         img: Juego5,
     },
     {
-        id: 6,
+        id:"6",
         name: "Rise of the Tomb Raider",
         category: 'XBOX',
         description: 'Rise of the Tomb Raider: Xbox one',

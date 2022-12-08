@@ -17,32 +17,7 @@ export const router = createBrowserRouter([
     },
 
     {
-        path: "/game/:game",
-        element: <Prod />
-    },
-
-    {
-        path: "/game/:game",
-        element: <Prod />
-    },
-
-    {
-        path: "/game/:game",
-        element: <Prod />
-    },
-
-    {
-        path: "/game/:game",
-        element: <Prod />
-    },
-
-    {
-        path: "/game/:game",
-        element: <Prod />
-    },
-
-    {
-        path: "/game/:game",
+        path: "/item/:id",
         element: <Prod />
     },
 
