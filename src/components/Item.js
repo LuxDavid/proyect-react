@@ -13,7 +13,7 @@ return(
         <Card.Text>
         ${product.price}
         </Card.Text>
-        <Button variant="primary"><Link className='rutas' to={`/item/${product.id}`}>Ver detalle del producto</Link></Button>
+        <Button className='agregar'><Link className='rutas' to={`/item/${product.id}`}>Ver detalle del producto</Link></Button>
       </Card.Body>
 
    

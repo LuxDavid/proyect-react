@@ -3,6 +3,10 @@ display: flex;
 flex-wrap: wrap;
 } */
 
+body{
+background-color: #444;
+}
+
 #portada-inicio{
 width: 100%;
 text-align: center;
@@ -67,5 +71,45 @@ text-decoration: none;
 }
 
 .rutas:hover{
-color: yellow;
+color: white;
+}
+
+.contenedor-detail{
+justify-content: center;
+}
+
+.detail{
+width:550px;
+}
+
+.agregar{
+margin-bottom: 15px;
+background-color: rgb(153, 19, 153);
+}
+
+.contador{
+margin: 0px 5px 0px 5px;
+text-align: center;
+}
+
+.cart-button{
+width: 5rem;
+width: 5rem;
+margin-bottom: 3px;
+background-color: rgb(153, 19, 153);
+}
+
+.agregar:hover{background-color: rgb(202, 202, 15);}
+.cart-button:hover{background-color: rgb(202, 202, 15);}
+
+.spinner{
+margin-top: 5rem;
+height: 30rem;
+width: 30rem;
+}
+
+.spinner-contenedor{
+display: flex;
+justify-content: center;
+
 }
