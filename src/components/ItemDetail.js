@@ -2,9 +2,36 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Button from 'react-bootstrap/Button';
 import '../App.css';
+import ItemCount from './ItemCount';
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ItemDetail({item}) {
 
+const navigate= useNavigate();
+
+const [count, setCount] = useState(1);
+
+const [stockActual, setStockActual] = useState(item.stock);
+
+const maximoStock = stockActual;
+
+function countChange(valor){
+
+  if (valor === "agregar" && count < maximoStock) setCount(count + 1);
+  if (valor === "eliminar" && count > 1) setCount(count - 1);
+
+}
+
+function limit() {
+  if (stockActual < count) alert("Por el momento no tenemos mas stock de este producto :(");
+  else setStockActual(stockActual - count);
+}
+
+function finishBuy(){
+navigate("/cart")
+};
 
 return (
  
@@ -17,17 +44,18 @@ return (
         <Card.Title>{item.name}</Card.Title>
         <Card.Text>{item.description}</Card.Text>
         <Card.Text>${item.price}</Card.Text>
-        <Button className='agregar'>Agregar al carrito</Button>
-        <div>
-        <Button className='cart-button' variant="primary" size="sm">+</Button>
-        <input className='contador' type="text" value={1}/>
-        <Button className='cart-button' size="sm">-</Button>
+        <Button className='agregar' onClick={limit} disabled={stockActual === 0}>Agregar al carrito</Button>
+        <div className='buttonContainer'>
+        <Button className='finalizar' onClick={finishBuy}>Finalizar compra</Button>
 
         </div>
-        
+
+      {stockActual > 0 ? (<ItemCount count={count} countChange={countChange}/>) :<Card.Text>Sin stock</Card.Text> } 
+
       </Card.Body>
+
       <Card.Footer>
-        <small className="text-muted">Disponibles: {item.stock}</small>
+        <small className="text-muted">Disponibles: {stockActual}</small>
       </Card.Footer>
     </Card>
   </CardGroup>
