@@ -1,7 +1,10 @@
 import Image from '../carrito2.jpg';
 import {Link} from "react-router-dom";
 
+
 function CarWidget(){
+
+  
 
 return(
 

@@ -88,6 +88,7 @@ width:550px;
 margin-bottom: 15px;
 background-color: rgb(153, 19, 153);
 width: 12rem;
+border:rgb(153, 19, 153); ;
 }
 
 .contador{
@@ -119,5 +120,35 @@ width: 30rem;
 .spinner-contenedor{
 display: flex;
 justify-content: center;
+
+}
+
+.cartVacio{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-flow: column wrap;
+
+}
+
+.listCarrito{
+width: 60rem;
+margin-left: 24rem;
+}
+
+.info{
+margin-left:23rem;
+}
+
+.info-precio{
+margin-left: 25rem;
+color: red;
+}
+
+.ircheckout{
+
+}
+
+.pago{
 
 }
