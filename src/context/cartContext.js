@@ -1,4 +1,4 @@
-import { createContext, useState,useEffect } from "react";
+import { createContext, useState,useEffect,} from "react";
 
 export const CartContext = createContext([]);
 
@@ -41,7 +41,7 @@ useEffect(() => {
 function removerProducto(itemId) {
 
     setProductsAdd((prevState) =>
-        prevState.filter((product) => product.id !== itemId)
+        prevState.filter((product) => product.item.id !== itemId)
     );
 
 }

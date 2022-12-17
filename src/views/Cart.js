@@ -1,11 +1,16 @@
 import Layout from "../components/Layout";
-import { useContext,} from "react";
+import { useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
 import Button from 'react-bootstrap/Button';
 import EmptyCart from '../assets/images/carritoVacio.png';
 import ItemCart from "../components/ItemCart";
 import ListGroup from 'react-bootstrap/ListGroup';
+import '../App.css';
+// import Delet from '../assets/images/eliminar.png';
+import { TrashWidget } from "../components/TrashWidget";
+
+
 
 function Cart(){
 
@@ -13,6 +18,11 @@ const navigate = useNavigate();
 
 const {productsAdd,vaciarCarrito,totalAmount}=useContext(CartContext);
 
+// function TrashWidget({itemId}){
+
+// <button onClick={()=>removerProducto(itemId)}><img src={Delet} alt="Eliminar"/></button>
+  
+// }
 
 
 return(
@@ -37,25 +47,33 @@ return(
 
 <>
 <ItemCart product={product.item} quantityAdded={quantityAdded}/>
-
-<div className="irCheckout">
-  <span className="pago">Total a pagar: {totalAmount}</span>
-  <Button variant="primary" size="lg" className="agregar" onClick={()=>{vaciarCarrito() 
-  navigate("/")}}>
-  Finalizar Compra
-  </Button>
-</div>
+<div><TrashWidget itemId={product.item.id}/></div>
 </>
+
 
 );
 
-})};
+})}
+
+<div className="checkoutPrice">
+  <span className="pago">Total a pagar:${totalAmount}</span>
+</div>
+
+<Button variant="primary" size="lg" className="irCheckout" onClick={()=>{vaciarCarrito() 
+  navigate("/")}}>
+  <p className="check">Finalizar Compra</p>
+  </Button>
 
 </ListGroup>
+
+
+
+
   
-
-
 }
+
+
+
 
 
 

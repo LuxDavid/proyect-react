@@ -145,10 +145,63 @@ margin-left: 25rem;
 color: red;
 }
 
-.ircheckout{
-
+.checkoutPrice{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 45rem;
+height: 4rem;
+background-color: rgb(153, 19, 153);
+margin-top: 1rem;
+margin-left: 8rem;
+margin-bottom: 2rem;
+border-radius: 500px;
 }
 
 .pago{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bold;
+color: rgb(202, 202, 15);
+font-size: 35px;
+}
 
+.irCheckout{
+background-color: red;
+border: red;
+border-radius: 500px;
+height: 4rem;
+}
+
+.irCheckout:hover{
+background-color: red;
+border: red;
+transform: scale(1.2, 1.2);
+}
+
+.check{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+font-size: 30px;
+}
+
+.prods-in-cart{
+margin-left: 1rem;
+}
+
+.eliminarProducto{
+height: 2rem;
+width: 3rem;
+padding-right: 1rem;
+margin-bottom: 10px;
+margin-top: 10px;
+margin-left: 27rem;
+background-color: red;
+}
+
+.eliminarIcon{
+  height: 2rem;
+  width: 3rem;
+  padding-right: 1rem;
+ 
 }

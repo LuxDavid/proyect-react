@@ -1,7 +1,7 @@
 import Badge from 'react-bootstrap/Badge';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-function ItemCart({product, quantityAdded }) {
+function ItemCart({product, quantityAdded,}) {
     return (
      
         <ListGroup.Item as="li" className="d-flex justify-content-between align-items-end">
@@ -11,6 +11,7 @@ function ItemCart({product, quantityAdded }) {
           </div>
           <Badge bg="warning" >
             {quantityAdded }
+
           </Badge>
         </ListGroup.Item>
       
