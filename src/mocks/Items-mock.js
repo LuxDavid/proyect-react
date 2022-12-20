@@ -26,7 +26,7 @@ export const Items = [
     },
     {
         id:"3",
-        name: "Tha last of us",
+        name: "The last of us",
         category:'PSN',
         description: 'The last of uf Remake edicion: PS4 original',
         stock: 23,

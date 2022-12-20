@@ -1,13 +1,16 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {Link} from "react-router-dom";
+import { GetImg } from '../hooks/getImg';
 
 function Item({product}){
+
+const image=GetImg(product.img);
 
 return(
 
 <Card style={{ width: '18rem', height:'25rem'}}>
-<Card.Img className='imagesCards' variant="top" src={product.img} />
+<Card.Img className='imagesCards' variant="top" src={image} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Text>

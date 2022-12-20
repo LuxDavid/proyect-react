@@ -6,6 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import {router} from './router';
 import { CartContextProvider } from './context/cartContext';
 
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCmpaAOhJj7UQhBh6L0NB_drDWfWkGrLDQ",
+  authDomain: "proyecto-final-react-28ad5.firebaseapp.com",
+  projectId: "proyecto-final-react-28ad5",
+  storageBucket: "proyecto-final-react-28ad5.appspot.com",
+  messagingSenderId: "235434045786",
+  appId: "1:235434045786:web:ae903ef0435693f86b0363"
+};
+
+initializeApp(firebaseConfig);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -1,47 +1,19 @@
-import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import { Items } from "../mocks/Items-mock";
-import { useParams } from "react-router-dom";
 import Loading from "./Loading";
+import GetItem from '../hooks/getItem';
 
 const ItemListContainer = () => {
-    const { category } = useParams();
-    const [games, setGames] = useState([]);
+  
+const games=GetItem();
 
-    useEffect(() => {
+ if(!games){
+  
+  return <Loading/>
+  
+ }
 
-      new Promise((resolve) =>
-        setTimeout(() => {
-          resolve(Items);
-        }, 1000)
-      ).then((data) => {
-      
-        if (category) {
-          const categories = data.filter(
-            (product) => product.category === category
-
-          );
-
-        setGames(categories);
-        } else {
-          setGames(data);
-        }
-      });
-
-    
-    }, [category]);
-
-    
-   
-    if (games.length === 0) {
-      return <Loading />;
-    }
-    
-    return (
-  <ItemList products={games} />
-
-        
-    );
+ return <ItemList products={games} />
+  
   };
   
   export default ItemListContainer;

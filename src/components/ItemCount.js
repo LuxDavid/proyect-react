@@ -9,9 +9,9 @@ return(
 
 <Button className='cart-button' variant="primary" size="sm" onClick={()=>countChange('eliminar')}>-</Button>
 
-   <input className='contador' type="text" value={count}/>
+<input className='contador' type="text" value={count}/>
 
-    <Button className='cart-button' size="sm" onClick={()=>countChange('agregar')}>+</Button>
+<Button className='cart-button' size="sm" onClick={()=>countChange('agregar')}>+</Button>
 
 </div>
 

@@ -2,8 +2,9 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Button from 'react-bootstrap/Button';
 import '../App.css';
-
+import { GetImg } from '../hooks/getImg';
 import ItemCount from './ItemCount';
+
 import { useNavigate } from "react-router-dom";
 import { useContext,useState } from "react";
 import { CartContext } from "../context/cartContext";
@@ -19,6 +20,8 @@ const [stockActual, setStockActual] = useState(item.stock);
 const maximoStock = stockActual;
 
 const { agregarProducto, inCart } = useContext(CartContext);
+
+const image=GetImg(item.img);
 
 function countChange(valor){
 
@@ -45,7 +48,7 @@ return (
 
  <CardGroup >
     <Card className='detail'>
-      <Card.Img variant="top" src={item.img}/>
+      <Card.Img variant="top" src={image} alt={image}/>
       <Card.Body>
         <Card.Title>{item.name}</Card.Title>
         <Card.Text>{item.description}</Card.Text>
