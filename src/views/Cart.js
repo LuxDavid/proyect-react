@@ -7,7 +7,6 @@ import EmptyCart from '../assets/images/carritoVacio.png';
 import ItemCart from "../components/ItemCart";
 import ListGroup from 'react-bootstrap/ListGroup';
 import '../App.css';
-// import Delet from '../assets/images/eliminar.png';
 import { TrashWidget } from "../components/TrashWidget";
 
 
@@ -16,14 +15,7 @@ function Cart(){
 
 const navigate = useNavigate();
 
-const {productsAdd,vaciarCarrito,totalAmount}=useContext(CartContext);
-
-// function TrashWidget({itemId}){
-
-// <button onClick={()=>removerProducto(itemId)}><img src={Delet} alt="Eliminar"/></button>
-  
-// }
-
+const {productsAdd,totalAmount}=useContext(CartContext);
 
 return(
 <Layout>
@@ -59,9 +51,10 @@ return(
   <span className="pago">Total a pagar:${totalAmount}</span>
 </div>
 
-<Button variant="primary" size="lg" className="irCheckout" onClick={()=>{vaciarCarrito() 
-  navigate("/")}}>
-  <p className="check">Finalizar Compra</p>
+<Button variant="primary" size="lg" className="irCheckout" onClick={()=>{navigate("/Checkout")}}>
+
+  <p className="check">Terminar compra</p>
+
   </Button>
 
 </ListGroup>
