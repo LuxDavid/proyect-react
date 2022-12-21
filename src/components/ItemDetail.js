@@ -23,12 +23,16 @@ const { agregarProducto, inCart } = useContext(CartContext);
 
 const image=GetImg(item.img);
 
+/*-------------------------------------------------------------------------------------*/
+
 function countChange(valor){
 
   if (valor === "agregar" && count < maximoStock) setCount(count + 1);
   if (valor === "eliminar" && count > 1) setCount(count - 1);
 
 }
+
+/*-------------------------------------------------------------------------------------*/
 
 function limit() {
   if (stockActual < count) alert("Por el momento no tenemos mas stock de este producto :(");
@@ -38,9 +42,13 @@ function limit() {
   }
 }
 
+/*-------------------------------------------------------------------------------------*/
+
 function finishBuy(){
 navigate("/cart")
 };
+
+/*-------------------------------------------------------------------------------------*/
 
 return (
  

@@ -1,14 +1,13 @@
 import ItemDetail from "./ItemDetail";
-import Loading from "./Loading";
 import GetItem from "../hooks/getItem";
-
+import ItemError from "./itemError";
 
 const ItemDetailContainer=()=>{
 
 const item =GetItem();
 
 if (!item) {
-return <Loading />;
+return <ItemError />;
 }
 
 return( 

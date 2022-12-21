@@ -1,5 +1,6 @@
 import CarWidget from "./cartWidget";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function Nav(){
 
@@ -9,16 +10,25 @@ return(
   <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
     
-        <Link className="nav-link" aria-current="page" to="/">Home</Link>
+        <NavLink className="nav-link"  aria-current="page" exact to="/">Home</NavLink>
+
+        <Dropdown>
+
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+        Categorias
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu className="dropdown-menu">
+
+      <Dropdown.Item className="dropdown-item"><NavLink className="nav-link" activeClassName="active"  aria-current="page" exact to="/category/PSN">PSN</NavLink></Dropdown.Item> 
+  
+      <Dropdown.Item><NavLink className="nav-link" activeClassName="active"  aria-current="page" exact to="/category/XBOX">XBOX</NavLink></Dropdown.Item> 
+
+        </Dropdown.Menu>
+
+        </Dropdown>
       
-     
-        <Link className="nav-link" aria-current="page" to="/category/PSN">PSN</Link>
-      
-      
-        <Link className="nav-link" aria-current="page" to="/category/XBOX">XBOX</Link>
-      
-      
-        <Link className="nav-link" ><CarWidget/></Link>
+        <NavLink className="nav-link" ><CarWidget/></NavLink>
       
     </ul>
 
