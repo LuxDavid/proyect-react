@@ -34,6 +34,8 @@ function Checkout() {
           )
         }
 
+        const fecha=new Date();
+
         const nombre = e.target[0].value;
 
         const checkNombre=e.target[1].value;
@@ -57,7 +59,7 @@ function Checkout() {
 
         const ordenes = collection(dataBase, 'Orders');
 
-        const realizarOrden = { comprador: { nombre, correoElectronico, numeroTelefonico }, productsAdd, montoTotal};
+        const realizarOrden = { comprador: { nombre, correoElectronico, numeroTelefonico }, productsAdd, montoTotal,fecha};
 
 if((nombre === checkNombre) && (correoElectronico === checkCorreo) && (numeroTelefonico === checkNumero)){
 

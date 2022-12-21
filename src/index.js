@@ -9,12 +9,12 @@ import { CartContextProvider } from './context/cartContext';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCmpaAOhJj7UQhBh6L0NB_drDWfWkGrLDQ",
-  authDomain: "proyecto-final-react-28ad5.firebaseapp.com",
-  projectId: "proyecto-final-react-28ad5",
-  storageBucket: "proyecto-final-react-28ad5.appspot.com",
-  messagingSenderId: "235434045786",
-  appId: "1:235434045786:web:ae903ef0435693f86b0363"
+  apiKey: "AIzaSyBBQpCml3n8JuM8DaoRNbKQ4zpF4xz_Keg",
+  authDomain: "flash-video-game.firebaseapp.com",
+  projectId: "flash-video-game",
+  storageBucket: "flash-video-game.appspot.com",
+  messagingSenderId: "192536535626",
+  appId: "1:192536535626:web:7b529da380a510b049fcb3"
 };
 
 initializeApp(firebaseConfig);
