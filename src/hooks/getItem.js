@@ -49,7 +49,7 @@ useEffect(()=>{
     
     getDocs(consulta).then((prods)=>setInfo(prods.docs.map((prod)=>({id: prod.id, ...prod.data()}))));
      
-    },[]);
+    },[category]);
 
 return info
 
